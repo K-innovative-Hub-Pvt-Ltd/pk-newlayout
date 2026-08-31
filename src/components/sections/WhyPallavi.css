@@ -1,0 +1,164 @@
+/* Styles for Why Pallavi section */
+#why-pallavi {
+    background-color: #ffffff;
+    background-image: url('/assets/images/backgrounds/why.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2.5rem 0;
+    position: relative;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-areas:
+        "tl-feat tl-img center tr-img tr-feat"
+        "bl-feat bl-img center br-img br-feat";
+    grid-template-columns: 1fr 1.5fr 1.8fr 1.5fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Map Grid Areas */
+.tl-feat { grid-area: tl-feat; justify-self: end; }
+.tl-img { grid-area: tl-img; }
+.center { grid-area: center; text-align: center; }
+.tr-img { grid-area: tr-img; }
+.tr-feat { grid-area: tr-feat; justify-self: start; }
+.bl-feat { grid-area: bl-feat; justify-self: end; }
+.bl-img { grid-area: bl-img; }
+.br-img { grid-area: br-img; }
+.br-feat { grid-area: br-feat; justify-self: start; }
+
+/* Features Styling */
+.why-feature {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    max-width: 200px;
+}
+
+.feature-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+    margin-top: -5px;
+}
+
+.feature-text h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+}
+
+.feature-text p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+/* Colors */
+.color-grow { color: #2b9348; }
+.color-explore { color: #0077b6; }
+.color-create { color: #f4a261; }
+.color-belong { color: #d13264; }
+
+/* Images Styling */
+.why-img {
+    position: relative;
+    width: 100%;
+}
+
+.blob-img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+}
+/* Organic blob shapes */
+.tl-img .blob-img { border-radius: 15px 40px 15px 15px; }
+.tr-img .blob-img { border-radius: 40px 15px 15px 15px; }
+.bl-img .blob-img { border-radius: 15px 15px 40px 15px; }
+.br-img .blob-img { border-radius: 15px 15px 15px 40px; }
+
+/* Center Text */
+.why-center h2 {
+    font-size: 2.2rem;
+    color: #2e287c;
+    line-height: 1.2;
+}
+.why-center h3 {
+    font-size: 2.2rem;
+    color: #2e287c;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+.heart-icon svg {
+    margin: 0 auto;
+}
+
+/* Arrows */
+.arrow {
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* Positioning Arrows */
+.arrow-grow {
+    right: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.arrow-explore {
+    left: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.arrow-create {
+    right: -50px;
+    top: 20%;
+}
+.arrow-belong {
+    left: -50px;
+    top: 20%;
+}
+
+@media (max-width: 1024px) {
+    .why-grid {
+        grid-template-areas:
+            "center center center center"
+            "tl-feat tl-img tr-img tr-feat"
+            "bl-feat bl-img br-img br-feat";
+        grid-template-columns: 1fr 2fr 2fr 1fr;
+    }
+    .arrow { display: none; } /* Hide arrows on smaller screens where layout stacks */
+    .why-center { margin-bottom: 3rem; }
+}
+
+@media (max-width: 768px) {
+    .why-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "center"
+            "tl-img"
+            "tl-feat"
+            "tr-img"
+            "tr-feat"
+            "bl-img"
+            "bl-feat"
+            "br-img"
+            "br-feat";
+        gap: 1.5rem;
+    }
+    .why-feature {
+        justify-self: center;
+        max-width: 100%;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}

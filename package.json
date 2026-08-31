@@ -1,13 +1,13 @@
 {
   "name": "pallavi-kidz",
+  "private": true,
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Pallavi Kidz — multi-page marketing site (Vite + React, static build).",
   "type": "module",
   "scripts": {
-    "dev": "vite Pallavi-Kidz/Homepage",
-    "build": "vite build Pallavi-Kidz/Homepage",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "keywords": [],
   "author": "",

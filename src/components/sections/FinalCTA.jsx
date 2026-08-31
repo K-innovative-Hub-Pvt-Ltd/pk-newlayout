@@ -1,0 +1,10 @@
+import React from 'react';
+import './FinalCTA.css';
+
+export default function FinalCTA() {
+  return (
+    <>
+      <section id="final-cta" className="section-container"></section>
+    </>
+  );
+}
