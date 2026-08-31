@@ -1,5 +1,5 @@
 import React from 'react';
-import './Campuses.css';
+import '../../styles/Campuses.css';
 
 const Campuses = () => {
   const campusData = [

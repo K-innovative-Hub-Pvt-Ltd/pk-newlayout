@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Leadership.css';
+import '../../styles/Leadership.css';
 
 const teamData = [
   {

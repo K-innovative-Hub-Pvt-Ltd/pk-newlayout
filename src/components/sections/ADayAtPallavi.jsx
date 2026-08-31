@@ -1,5 +1,5 @@
 import React from 'react';
-import './ADayAtPallavi.css';
+import '../../styles/ADayAtPallavi.css';
 
 export default function ADayAtPallavi() {
   return (

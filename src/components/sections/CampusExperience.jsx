@@ -1,5 +1,5 @@
 import React from 'react';
-import './CampusExperience.css';
+import '../../styles/CampusExperience.css';
 
 export default function CampusExperience() {
   return (

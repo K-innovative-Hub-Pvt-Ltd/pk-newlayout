@@ -1,5 +1,5 @@
 import React from 'react';
-import './DevelopmentOutcomes.css';
+import '../../styles/DevelopmentOutcomes.css';
 
 export default function DevelopmentOutcomes() {
   return (

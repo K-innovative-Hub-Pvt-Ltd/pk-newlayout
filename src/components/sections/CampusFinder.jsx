@@ -1,5 +1,5 @@
 import React from 'react';
-import './CampusFinder.css';
+import '../../styles/CampusFinder.css';
 
 export default function CampusFinder() {
   return (

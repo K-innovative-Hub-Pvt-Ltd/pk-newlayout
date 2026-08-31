@@ -1,5 +1,5 @@
 import React from 'react';
-import './WhyPallavi.css';
+import '../../styles/WhyPallavi.css';
 
 export default function WhyPallavi() {
   return (

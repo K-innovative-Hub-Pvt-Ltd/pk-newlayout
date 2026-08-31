@@ -1,5 +1,5 @@
 import React from 'react';
-import './Teachers.css';
+import '../../styles/Teachers.css';
 
 export default function Teachers() {
   return (

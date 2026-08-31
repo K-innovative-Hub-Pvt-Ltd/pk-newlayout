@@ -1,5 +1,5 @@
 import React from 'react';
-import './BrandStory.css';
+import '../../styles/BrandStory.css';
 
 export default function BrandStory() {
   return (

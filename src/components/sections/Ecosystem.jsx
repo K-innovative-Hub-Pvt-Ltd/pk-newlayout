@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import './Ecosystem.css';
+import '../../styles/Ecosystem.css';
 
 export default function Ecosystem() {
   const sectionRef = useRef(null);

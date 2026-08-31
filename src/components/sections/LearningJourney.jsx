@@ -1,5 +1,5 @@
 import React from 'react';
-import './LearningJourney.css';
+import '../../styles/LearningJourney.css';
 
 export default function LearningJourney() {
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import './FinalCTA.css';
+import '../../styles/FinalCTA.css';
 
 export default function FinalCTA() {
   return (
