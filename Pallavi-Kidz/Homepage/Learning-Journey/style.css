@@ -1,0 +1,244 @@
+/* Styles for Learning Journey section */
+#learning-journey {
+    position: relative;
+    padding: 2.5rem 0;
+    background-color: #f4fafe;
+    overflow: hidden;
+}
+
+/* Gentle top wave */
+#learning-journey::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #f4fafe;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+}
+
+.journey-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    gap: 4rem;
+}
+
+.journey-intro {
+    flex: none;
+    text-align: center;
+}
+
+.journey-intro h2 {
+    font-size: 2.8rem;
+    color: #2e287c;
+    line-height: 1.25;
+}
+
+.journey-intro h2 br {
+    display: none;
+    /* Let it wrap naturally on large screens */
+}
+
+.underline-wrap {
+    margin: 10px auto 0 auto;
+    width: 120px;
+}
+
+.journey-timeline {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    min-height: 250px;
+}
+
+.animated-journey-path {
+    position: absolute;
+    top: 25px;
+    left: 75px;
+    width: calc(100% - 150px);
+    height: 200px;
+    z-index: 1;
+}
+
+.animated-journey-path path {
+    animation: dash-move 30s linear infinite;
+}
+
+@keyframes dash-move {
+    to {
+        stroke-dashoffset: -1000;
+    }
+}
+
+.journey-step {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 140px;
+    position: relative;
+    z-index: 2;
+}
+
+.staggered-down {
+    transform: translateY(35px);
+}
+
+.staggered-up {
+    transform: translateY(-35px);
+}
+
+.step-img-wrap {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    margin: 0 auto 1.2rem auto;
+    position: relative;
+    z-index: 10;
+    animation: auto-float 4s ease-in-out infinite;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Stagger the animations so they don't all bob at the same time */
+.journey-step:nth-child(1) .step-img-wrap {
+    animation-delay: 0s;
+}
+
+.journey-step:nth-child(2) .step-img-wrap {
+    animation-delay: 1.2s;
+}
+
+.journey-step:nth-child(3) .step-img-wrap {
+    animation-delay: 0.5s;
+}
+
+.journey-step:nth-child(4) .step-img-wrap {
+    animation-delay: 2.1s;
+}
+
+.journey-step:nth-child(5) .step-img-wrap {
+    animation-delay: 0.8s;
+}
+
+.journey-step:nth-child(6) .step-img-wrap {
+    animation-delay: 1.6s;
+}
+
+@keyframes auto-float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.step-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.color-orange {
+    color: var(--pk-brand-orange);
+}
+
+.color-green {
+    color: var(--pk-brand-green);
+}
+
+.color-blue {
+    color: var(--pk-brand-blue);
+}
+
+.color-pink {
+    color: var(--pk-brand-pink);
+}
+
+.color-purple {
+    color: var(--pk-primary-dark);
+}
+
+.step-age-tag {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #64748b;
+    background: #ffffff;
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--pk-radius-pill);
+    margin-bottom: 0.4rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.step-title {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 800;
+    margin-bottom: 0.2rem;
+    letter-spacing: 0.5px;
+}
+
+.step-subtitle {
+    font-size: 1.1rem;
+    color: #222;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+
+.step-desc {
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+@media (max-width: 1200px) {
+    .journey-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .journey-intro {
+        flex: auto;
+        margin-bottom: 2rem;
+    }
+
+    .underline-wrap {
+        margin: 5px auto 0;
+    }
+
+    .journey-timeline {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3rem;
+        min-height: auto;
+    }
+
+    .animated-journey-path {
+        display: none;
+        /* Hide on mobile/wrap since items wrap */
+    }
+
+    .staggered-down,
+    .staggered-up {
+        transform: none;
+        /* Remove stagger on mobile */
+    }
+}

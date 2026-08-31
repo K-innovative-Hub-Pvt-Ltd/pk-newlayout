@@ -1,0 +1,267 @@
+/* Styles for A Day at Pallavi section */
+#a-day-at-pallavi {
+    background-color: #ffffff;
+    padding: 2.5rem 0;
+}
+
+.day-wrapper {
+    display: flex;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    gap: 4rem;
+}
+
+.day-intro {
+    flex: 0 0 220px;
+}
+
+.day-intro h2 {
+    font-size: 2.2rem;
+    color: #2e287c;
+    /* Dark blue */
+    line-height: 1.2;
+}
+
+.orange-scribble {
+    margin-top: 5px;
+    width: 100px;
+}
+
+.day-schedule-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 2.4fr 1.2fr 44px 1.2fr 2.4fr;
+    gap: 2.2rem 1.2rem;
+    align-items: center;
+    position: relative;
+}
+
+/* Central Dashed Line with Animated Downward Flow */
+.schedule-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    background-image: linear-gradient(to bottom, #bac1cc 50%, transparent 50%);
+    background-size: 2px 14px;
+    z-index: 1;
+    animation: flowDash 25s linear infinite;
+}
+
+@keyframes flowDash {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 0 1000px;
+    }
+}
+
+/* Images with Capsule Pill Geometry & Interactive Hover Lift */
+.schedule-img {
+    width: 100%;
+    height: 100px;
+    border-radius: 9999px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    position: relative;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
+}
+
+.schedule-img:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 14px 28px rgba(47, 36, 130, 0.15);
+}
+
+.schedule-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 35%;
+    border-radius: 9999px;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.schedule-img:hover img {
+    transform: scale(1.08);
+}
+
+/* Text Blocks with Interactive Hover */
+.schedule-text {
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.schedule-text:hover {
+    transform: translateY(-2px);
+}
+
+.left-text {
+    padding-left: 1rem;
+    padding-right: 0.5rem;
+}
+
+.right-text {
+    padding-left: 1.5rem;
+    padding-right: 0.5rem;
+}
+
+.schedule-text h4 {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    color: var(--pk-primary-dark);
+    margin-bottom: 0.3rem;
+    font-weight: 700;
+}
+
+.schedule-text h4 strong {
+    font-family: var(--font-display);
+    font-weight: 900;
+    margin-right: 0.5rem;
+    color: var(--pk-primary-dark);
+}
+
+.schedule-text p {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: #64748B;
+    line-height: 1.45;
+}
+
+/* Right side text matching palette */
+.text-blue {
+    color: var(--pk-primary-dark) !important;
+}
+
+p.text-blue {
+    color: #475569 !important;
+}
+
+/* Animated Pulsing Milestone Dots */
+.schedule-dot {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    justify-self: center;
+    z-index: 2;
+    box-shadow: 0 0 0 6px #fff;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.schedule-dot:hover {
+    transform: scale(1.25);
+}
+
+.dot-green {
+    background-color: var(--pk-brand-green);
+    animation: beaconPulseGreen 2.5s infinite;
+}
+
+.dot-orange {
+    background-color: var(--pk-brand-orange);
+    animation: beaconPulseOrange 2.5s infinite 0.8s;
+}
+
+.dot-pink {
+    background-color: var(--pk-brand-pink);
+    animation: beaconPulsePink 2.5s infinite 1.6s;
+}
+
+@keyframes beaconPulseGreen {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 6px #fff, 0 0 0 0 rgba(0, 166, 81, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 0 6px #fff, 0 0 0 10px rgba(0, 166, 81, 0);
+    }
+}
+
+@keyframes beaconPulseOrange {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 6px #fff, 0 0 0 0 rgba(238, 124, 0, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 0 6px #fff, 0 0 0 10px rgba(238, 124, 0, 0);
+    }
+}
+
+@keyframes beaconPulsePink {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 6px #fff, 0 0 0 0 rgba(228, 0, 125, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 0 6px #fff, 0 0 0 10px rgba(228, 0, 125, 0);
+    }
+}
+
+/* Hand-drawn scribble animation */
+.scribble path {
+    stroke-dasharray: 150;
+    stroke-dashoffset: 0;
+    animation: drawScribble 2.5s ease-out forwards;
+}
+
+@keyframes drawScribble {
+    from {
+        stroke-dashoffset: 150;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@media (max-width: 1100px) {
+    .day-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .day-intro {
+        flex: auto;
+    }
+
+    .orange-scribble {
+        margin: 5px auto 0;
+    }
+
+    .day-schedule-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        width: 100%;
+    }
+
+    .schedule-line,
+    .schedule-dot {
+        display: none;
+    }
+
+    .schedule-img {
+        height: 140px;
+        margin-bottom: 1rem;
+    }
+
+    .left-text,
+    .right-text {
+        padding: 0;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+}

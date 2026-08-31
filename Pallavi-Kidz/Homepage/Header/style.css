@@ -1,0 +1,193 @@
+/* ==========================================================================
+   HEADER / NAVBAR STYLING (Pallavi Kidz Premium Standard)
+   ========================================================================== */
+
+.pk-header-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0.9rem 2.5rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.main-logo {
+    height: 75px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.05));
+}
+
+.main-logo:hover {
+    transform: scale(1.04);
+}
+
+/* ── Navigation Links ── */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.nav-link-item {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--pk-text-dark);
+    padding: 0.5rem 1.1rem;
+    border-radius: var(--pk-radius-pill);
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.nav-link-item:hover {
+    color: var(--pk-brand-green);
+    background: rgba(0, 166, 81, 0.08);
+}
+
+.nav-link-item.active {
+    color: var(--pk-primary-dark);
+    background: rgba(47, 36, 130, 0.08);
+}
+
+/* ── Action Buttons ── */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+}
+
+.btn-header-outline {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--pk-primary-dark);
+    border: 2px solid var(--pk-primary-dark);
+    padding: 0.65rem 1.4rem;
+    border-radius: var(--pk-radius-pill);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-header-outline:hover {
+    background: rgba(47, 36, 130, 0.06);
+    transform: translateY(-2px);
+}
+
+.btn-header-primary {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #ffffff;
+    background: var(--pk-brand-orange);
+    padding: 0.65rem 1.5rem;
+    border-radius: var(--pk-radius-pill);
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(238, 124, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-header-primary:hover {
+    background: #d86e00;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(238, 124, 0, 0.4);
+}
+
+/* ── Mobile Hamburger ── */
+.mobile-hamburger-btn {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 1.75rem;
+    color: var(--pk-primary-dark);
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    border-radius: 8px;
+}
+
+/* ── Mobile Drawer ── */
+.mobile-nav-drawer {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem 2rem 2rem;
+    background: #ffffff;
+    border-top: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.mobile-nav-drawer a {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--pk-primary-dark);
+    text-decoration: none;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.mobile-drawer-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.mobile-drawer-actions .btn-header-outline,
+.mobile-drawer-actions .btn-header-primary {
+    text-align: center;
+    width: 100%;
+}
+
+/* ── Responsive Media Queries ── */
+@media (max-width: 1024px) {
+    .nav-links {
+        gap: 0.25rem;
+    }
+    .nav-link-item {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .nav-links {
+        display: none;
+    }
+    .mobile-hamburger-btn {
+        display: block;
+    }
+    .mobile-nav-drawer {
+        display: flex;
+    }
+    .navbar-content {
+        padding: 0.75rem 1.5rem;
+    }
+    .main-logo {
+        height: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-actions .btn-header-outline,
+    .nav-actions .btn-header-primary {
+        display: none;
+    }
+}

@@ -1,0 +1,211 @@
+/* ==========================================================================
+   FOOTER (Pallavi Kidz Premium Standard)
+   ========================================================================== */
+
+.pk-footer {
+    background-color: var(--pk-forest-green);
+    color: #ffffff;
+    font-family: var(--font-body);
+    position: relative;
+    padding-top: 0;
+}
+
+.footer-top-accent-bar {
+    height: 4px;
+    background: linear-gradient(90deg, var(--pk-brand-green), var(--pk-brand-orange), var(--pk-brand-pink), var(--pk-brand-blue));
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 5rem 3rem 2.5rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1.2fr 1.2fr 1.5fr;
+    gap: 3.5rem;
+    margin-bottom: 4rem;
+}
+
+.footer-col-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-brand-logo {
+    height: 65px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 1.2rem;
+    background: #ffffff;
+    padding: 0.5rem 1.2rem;
+    border-radius: 18px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.footer-brand-logo:hover {
+    transform: scale(1.03);
+}
+
+.footer-brand-desc {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    max-width: 380px;
+}
+
+.footer-badge-trust {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.4rem 1rem;
+    border-radius: var(--pk-radius-pill);
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #FFE600;
+}
+
+.footer-col-title {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.02em;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.footer-col-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: var(--pk-brand-green);
+    border-radius: 2px;
+}
+
+.footer-links-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.footer-links-list a {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 0.92rem;
+    transition: all 0.2s ease;
+}
+
+.footer-links-list a:hover {
+    color: var(--pk-brand-orange);
+    padding-left: 4px;
+}
+
+.footer-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.contact-item {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+}
+
+.contact-item strong {
+    color: #ffffff;
+}
+
+/* ── Bottom Bar ── */
+.footer-bottom-bar {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.copyright-text {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-legal-links {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.footer-legal-links a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.2s;
+}
+
+.footer-legal-links a:hover {
+    color: #ffffff;
+}
+
+.footer-legal-links span {
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.scroll-top-btn {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    width: 44px;
+    height: 44px;
+    background-color: var(--pk-brand-green);
+    border-radius: var(--pk-radius-pill);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 166, 81, 0.4);
+}
+
+.scroll-top-btn:hover {
+    background-color: #008842;
+    transform: translateY(-3px);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .footer-container {
+        padding: 3.5rem 1.5rem 2rem;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .footer-bottom-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

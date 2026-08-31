@@ -1,0 +1,164 @@
+/* ==========================================================================
+   PARENT STORIES / TESTIMONIALS (Pallavi Kidz Premium Standard)
+   ========================================================================== */
+
+.parent-stories-section {
+    background-color: #FFF5F7;
+    padding: 2.5rem 3rem;
+    font-family: var(--font-body);
+    position: relative;
+    overflow: hidden;
+}
+
+.parent-stories-container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.stories-header {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 4rem auto;
+}
+
+.stories-badge-pill {
+    display: inline-flex;
+    align-items: center;
+    background: var(--pk-brand-pink);
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    padding: 0.35rem 1.1rem;
+    border-radius: var(--pk-radius-pill);
+    margin-bottom: 1.2rem;
+    box-shadow: 0 4px 12px rgba(228, 0, 125, 0.25);
+}
+
+.stories-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.4rem, 4vw, 3.5rem);
+    font-weight: 900;
+    color: var(--pk-primary-dark);
+    line-height: 1.15;
+    margin-bottom: 1rem;
+}
+
+.stories-title-highlight {
+    color: var(--pk-brand-orange);
+}
+
+.stories-subtitle {
+    font-size: 1.05rem;
+    color: #64748B;
+    line-height: 1.6;
+}
+
+/* ── Testimonials Grid ── */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background: #ffffff;
+    border-radius: var(--pk-radius-card);
+    padding: 2.5rem 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    border: 1px solid #E2E8F0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(47, 36, 130, 0.08);
+    border-color: rgba(47, 36, 130, 0.15);
+}
+
+.stars-row {
+    display: flex;
+    gap: 0.25rem;
+    margin-bottom: 1.2rem;
+}
+
+.star-icon {
+    color: #FFB800;
+    font-size: 1.2rem;
+}
+
+.testimonial-quote {
+    font-size: 0.98rem;
+    line-height: 1.7;
+    color: #334155;
+    font-style: italic;
+    margin-bottom: 2rem;
+    flex: 1;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-top: 1px solid #F1F5F9;
+    padding-top: 1.2rem;
+}
+
+.author-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--pk-primary-dark), #4f46e5);
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(47, 36, 130, 0.2);
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-name {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    color: var(--pk-primary-dark);
+    font-weight: 800;
+}
+
+.author-child {
+    font-size: 0.8rem;
+    color: var(--pk-brand-green);
+    font-weight: 700;
+}
+
+.author-campus {
+    font-size: 0.75rem;
+    color: #94A3B8;
+}
+
+@media (max-width: 1024px) {
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .parent-stories-section {
+        padding: 4rem 1.5rem;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+}

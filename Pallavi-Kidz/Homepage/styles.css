@@ -1,0 +1,161 @@
+/* Global Reset and Variables */
+:root {
+    /* Brand Colors matching pallavikidz.com standard */
+    --pk-primary-dark: #2F2482;    /* Deep Indigo / Royal Navy */
+    --pk-forest-green: #0B3D2E;    /* Deep Forest Green (Footer & Highlights) */
+    --pk-brand-green: #00A651;     /* Leaf Green */
+    --pk-brand-orange: #EE7C00;    /* Warm Sun Orange */
+    --pk-brand-pink: #E4007D;      /* Playful Magenta / Pink */
+    --pk-brand-blue: #009DE2;      /* Clear Sky Blue */
+    --pk-brand-yellow: #FFB800;    /* Bright Cheerful Yellow */
+    
+    /* Backgrounds & Neutrals */
+    --pk-cream-bg: #FFFDF8;        /* Warm Cream Section Background */
+    --pk-light-bg: #F8FAFC;        /* Crisp Off-White */
+    --pk-white: #FFFFFF;
+    --pk-text-dark: #1E293B;
+    --pk-text-muted: #64748B;
+    
+    /* Fonts */
+    --font-display: 'Fredoka', 'Outfit', sans-serif;
+    --font-heading: 'Outfit', 'Fredoka', sans-serif;
+    --font-body: 'Nunito', 'Inter', system-ui, sans-serif;
+    
+    /* Shadows & Radii */
+    --pk-shadow-soft: 0 10px 30px rgba(47, 36, 130, 0.07);
+    --pk-shadow-card: 0 15px 35px rgba(0, 0, 0, 0.08);
+    --pk-radius-pill: 9999px;
+    --pk-radius-card: 28px;
+    --pk-radius-blob: 40px 120px 40px 40px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--pk-text-dark);
+    background-color: var(--pk-cream-bg);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--pk-primary-dark);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* Base styles for sections to ensure they take up appropriate space */
+.section-container {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Exceptions */
+#header {
+    min-height: auto;
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-white);
+    z-index: 1000;
+}
+
+#footer {
+    min-height: auto;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.8rem; /* slightly wider padding for pills */
+    border-radius: 99px; /* Changed to pill shape */
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-family: var(--font-body);
+}
+
+.btn-primary {
+    background-color: #2e287c; /* Deep blue from design */
+    color: white;
+    border: 2px solid #2e287c;
+}
+
+.btn-primary:hover {
+    background-color: #1a1654;
+    border-color: #1a1654;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #2e287c;
+    border: 2px solid #2e287c;
+}
+
+.btn-outline:hover {
+    background-color: #f0f4ff;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Split Section Wrapper */
+.split-section-wrapper { display: flex; width: 100%; max-width: 1800px; margin: 0 auto; gap: 1rem; padding: 1rem; }
+.split-section-wrapper > section { flex: 1; min-height: 0; border-radius: 40px; overflow: hidden; margin: 0; padding: 0; }
+@media (max-width: 1024px) { .split-section-wrapper { flex-direction: column; } .split-section-wrapper > section { width: 100%; min-height: 400px; } }
+
+/* Lenis Smooth Scrolling Styles */
+html.lenis, html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+    pointer-events: none;
+}
+
+/* ── Scroll Reveal Animation System ── */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.scroll-reveal.is-revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Don't hide header or hero initially for instant above-the-fold render */
+#header.scroll-reveal,
+#hero.scroll-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+}
